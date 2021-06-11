@@ -5,8 +5,6 @@ import { Types } from 'mongoose';
 export interface ReviewModel extends Base {}
 export class ReviewModel extends TimeStamps {
   @prop()
-  _id: string;
-  @prop()
   name: string;
   @prop()
   title: string;
@@ -14,8 +12,6 @@ export class ReviewModel extends TimeStamps {
   description: string;
   @prop()
   rating: number;
-  @prop()
-  createdAd: Date;
   @prop()
   productId: Types.ObjectId;
 }

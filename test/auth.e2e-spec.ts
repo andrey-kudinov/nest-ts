@@ -38,7 +38,7 @@ describe('AuthController (e2e)', () => {
   it('/auth/login (POST) - fail password', () => {
     return request(app.getHttpServer())
       .post('/auth/login')
-      .send({ ...loginDto, password: 2 })
+      .send({ ...loginDto, password: '2' })
       .expect(401, {
         statusCode: 401,
         message: 'Неверный пароль',
